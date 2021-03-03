@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TouchableOpacity } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome, Feather } from "@expo/vector-icons";
 import Avatar from "../../../assets/avatar.png";
 
 import * as Styled from "./styled";
@@ -26,6 +26,9 @@ const Post = ({ data }) => {
             size={24}
             color={isLike ? "#ED1C24" : "#fff"}
           />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Feather style={{ marginLeft: 10 }} name='message-circle' size={24} color='#fff' />
         </TouchableOpacity>
       </Styled.Box>
     </Styled.Container>

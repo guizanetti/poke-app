@@ -36,6 +36,7 @@ export const Image = styled.Image`
 `;
 
 export const Box = styled.View`
+  flex-direction: row;
   width: 90%;
   padding: 10px;
 `;
