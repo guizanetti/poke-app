@@ -1,39 +1,44 @@
 import React from "react";
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import * as Styled from "./styled";
 
-const DetailItem = () => {
+const DetailItem = ({ data }) => {
   return (
     <Styled.Container>
       <Styled.BoxImage>
         <Styled.Image
-          source={{ uri: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png" }}
+          source={{
+            uri: data?.sprites?.back_default,
+          }}
         />
       </Styled.BoxImage>
-      <Styled.Name>Ditto</Styled.Name>
+      <Styled.Name>{data.name}</Styled.Name>
       <Styled.Group>
         <Styled.BoxInfo>
           <Styled.Title>Height</Styled.Title>
-          <Styled.Info>0.3</Styled.Info>
+          <Styled.Info> {data.height} </Styled.Info>
         </Styled.BoxInfo>
 
         <Styled.BoxInfo>
           <Styled.Title>Weight</Styled.Title>
-          <Styled.Info>4.0</Styled.Info>
+          <Styled.Info>{data.weight}</Styled.Info>
         </Styled.BoxInfo>
         <Styled.BoxInfo>
-          <Styled.Title>Gender</Styled.Title>
-          <Styled.Info>Unknown</Styled.Info>
-        </Styled.BoxInfo>
-        <Styled.BoxInfo>
-          <Styled.Title>Category</Styled.Title>
-          <Styled.Info>Transform</Styled.Info>
+          <Styled.Title>Base Exp.</Styled.Title>
+          <Styled.Info>{data.base_experience}</Styled.Info>
         </Styled.BoxInfo>
 
         <Styled.BoxInfo>
           <Styled.Title>Abilities</Styled.Title>
-          <Styled.Info>Limber</Styled.Info>
+          <Styled.Info>{data.abilities[0]?.ability?.name}</Styled.Info>
         </Styled.BoxInfo>
+
+        {data.stats.map((i, index) => (
+          <Styled.BoxInfo key={index}>
+            <Styled.Title>{i.stat.name}</Styled.Title>
+            <Styled.Info>{i.base_stat}</Styled.Info>
+          </Styled.BoxInfo>
+        ))}
       </Styled.Group>
     </Styled.Container>
   );

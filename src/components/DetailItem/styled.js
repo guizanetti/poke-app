@@ -25,12 +25,14 @@ export const Title = styled.Text`
   font-size: 16px;
   font-weight: bold;
   color: #000;
+  text-transform: capitalize;
 `;
 
 export const Info = styled.Text`
   margin-top: 5px;
   font-weight: 500;
   color: #fff;
+  text-transform: capitalize;
 `;
 
 export const BoxImage = styled.View``;
@@ -38,6 +40,7 @@ export const BoxImage = styled.View``;
 export const Name = styled.Text`
   font-size: 30px;
   color: #000;
+  text-transform: capitalize;
 `;
 
 export const Image = styled.Image`

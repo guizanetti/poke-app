@@ -1,5 +1,8 @@
 import styled from "styled-components/native";
-import { getPercentageSizeHeight, getPercentageSizeWidth } from "../../utils/size";
+import {
+  getPercentageSizeHeight,
+  getPercentageSizeWidth,
+} from "../../utils/size";
 
 export const Container = styled.View`
   align-items: center;
@@ -27,12 +30,15 @@ export const Title = styled.Text`
   color: #fff;
 `;
 
-export const BoxImage = styled.TouchableOpacity``;
+export const BoxImage = styled.TouchableOpacity`
+  background-color: #fff2;
+  border-radius: 8px;
+
+`;
 
 export const Image = styled.Image`
   width: ${getPercentageSizeWidth(90)}px;
   height: ${getPercentageSizeHeight(50)}px;
-  border-radius: 8px;
 `;
 
 export const Box = styled.View`
