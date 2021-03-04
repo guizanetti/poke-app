@@ -2,7 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
-import DetailItem from "../screens/DetailItem";
+import DetailScreen from "../screens/DetailScreen";
 
 const Stack = createStackNavigator();
 
@@ -17,7 +17,7 @@ const Navigation = () => {
         initialRouteName='Home'
       >
         <Stack.Screen name='Home' component={Home} />
-        <Stack.Screen name='DetailItem' component={DetailItem} />
+        <Stack.Screen name='DetailScreen' component={DetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

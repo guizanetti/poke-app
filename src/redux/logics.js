@@ -1,7 +1,5 @@
 import configureFeedLogics from "./feed/logic";
 
-const feedLogics = configureFeedLogics();
-
-const logics = [...feedLogics];
+const logics = [...configureFeedLogics()];
 
 export default logics;

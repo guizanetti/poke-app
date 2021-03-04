@@ -8,7 +8,7 @@ export const hanldeRequestList = () => {
       return fetch("https://pokeapi.co/api/v2/pokemon")
         .then((res) => res.json())
         .then((res) => {
-          dispatch(requestListSuccess(res.result));
+          dispatch(requestListSuccess(res.results));
         })
         .catch((err) => console.log(err))
         .finally(done);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { FontAwesome, Feather } from "@expo/vector-icons";
 import Avatar from "../../../assets/avatar.png";
 
@@ -14,10 +14,18 @@ const Post = ({ data }) => {
     <Styled.Container>
       <Styled.Header>
         <Styled.Avatar source={Avatar} />
-        <Styled.Title>Pokemon</Styled.Title>
+        <View>
+          <Styled.Title>Pokemon</Styled.Title>
+          <Text style={{ color: "#fff", marginLeft: 11 }}>{data.name}</Text>
+        </View>
       </Styled.Header>
-      <Styled.BoxImage onPress={() => navigate("DetailItem")}>
-        <Styled.Image source={{ uri: data?.url }} />
+      <Styled.BoxImage onPress={() => navigate("DetailScreen")}>
+        <Styled.Image
+          source={{
+            uri:
+              "https://thumbs.dreamstime.com/b/ilustra%C3%A7%C3%A3o-do-vetor-de-pikachu-no-pokeball-isolado-fundo-branco-pokemon-136791058.jpg",
+          }}
+        />
       </Styled.BoxImage>
       <Styled.Box>
         <TouchableOpacity onPress={() => setIsLike(!isLike)}>

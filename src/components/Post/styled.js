@@ -10,7 +10,7 @@ export const Header = styled.View`
   flex-direction: row;
   align-items: center;
   width: 90%;
-  margin-vertical: 10px;
+  margin: 10px;
 `;
 
 export const Avatar = styled.Image`
