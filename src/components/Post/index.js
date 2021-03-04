@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { FontAwesome, Feather } from "@expo/vector-icons";
-import Avatar from "../../../assets/avatar.png"
+import Avatar from "../../../assets/images/avatar.png";
 import * as Styled from "./styled";
 
 const Post = ({ data, onPress, id }) => {
@@ -28,7 +28,9 @@ const Post = ({ data, onPress, id }) => {
       <Styled.BoxImage onPress={onPress}>
         <Styled.Image
           source={{
-            uri: `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0${id.toString().padStart(2, '0')}.png`,
+            uri: `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0${id
+              .toString()
+              .padStart(2, "0")}.png`,
           }}
         />
       </Styled.BoxImage>
