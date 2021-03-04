@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import { FontAwesome, Feather } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 import Avatar from "../../../assets/images/avatar.png";
 import * as Styled from "./styled";
 
@@ -14,15 +14,7 @@ const Post = ({ data, onPress, id }) => {
         <View>
           <Styled.Title>Pokemon</Styled.Title>
 
-          <Text
-            style={{
-              color: "#fff4",
-              marginLeft: 11,
-              textTransform: "capitalize",
-            }}
-          >
-            {data.name}
-          </Text>
+          <Styled.Name>{data.name}</Styled.Name>
         </View>
       </Styled.Header>
       <Styled.BoxImage onPress={onPress}>

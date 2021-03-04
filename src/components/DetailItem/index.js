@@ -1,5 +1,4 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
 import * as Styled from "./styled";
 
 const DetailItem = ({ data }) => {

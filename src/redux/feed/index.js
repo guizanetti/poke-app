@@ -1,4 +1,4 @@
-import { createAction, createActions, handleActions } from "redux-actions";
+import { createActions, handleActions } from "redux-actions";
 
 export const REQUEST_LIST = "REQUEST_LIST";
 export const REQUEST_LIST_SUCCESS = "REQUEST_LIST_SUCCESS";

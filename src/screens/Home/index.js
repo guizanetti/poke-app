@@ -1,13 +1,9 @@
 import React, { useEffect } from "react";
-import { FlatList, ScrollView } from "react-native";
+import { FlatList } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../../components/Header";
 import Post from "../../components/Post";
-import {
-  requestDetail,
-  requestList,
-  requestListSuccess,
-} from "../../redux/feed";
+import { requestDetail, requestList } from "../../redux/feed";
 
 const Home = ({ navigation }) => {
   const {
@@ -32,7 +28,7 @@ const Home = ({ navigation }) => {
         onEndReachedThreshold={0.5}
         data={list}
         keyExtractor={(_, index) => index}
-        renderItem={({index, item}) => {
+        renderItem={({ index, item }) => {
           return (
             <Post
               key={index}
